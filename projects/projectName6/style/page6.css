@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Heebo", sans-serif;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    border: 0;
+    border-bottom: 4px solid #fdbd03;
+    background-color: #e5eeff;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    top: 5%;
+    left: 3%;
+}
+
+.top-bar {
+    border: 18px solid #fdbd03;
+    width: 22vw;
+    height: 18px;
+}
+
+.column {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.heebo {
+    font-family: "Heebo", sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-right: 100px;
+}
+
+.iphone-img {
+    margin: 138px 166px 323px 182px;
+}
+
+.contact-form {
+    width: 54vw;
+    border-bottom: 18px solid #fdbd03;
+    padding: 226px 0 0 0;
+}
+
+.personal-details-form {
+    display: flex;
+    flex-direction: row;
+}
+
+.personal-details-form input {
+    width: 417px;
+    height: 50px;
+}
+
+#name {
+    margin-left: 20px;
+}
+
+.contact-form h1 {
+    font-weight: 900;
+    color: #fdbd03;
+    font-size: 66px;
+}
+
+.contact-form p {
+    width: 385px;
+    height: 58px;
+}
+
+#message {
+    height: 142px;
+    width: 856px;
+}
+
+.contact-form button {
+    font-family: "Heebo", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    width: 166px;
+    height: 50px;
+    color: #000;
+    background-color: #fdbd03;
+    margin-top: 73px;
+    border: 0;
+}
+
+.social-links {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 56px;
+    margin-left: 55px;
+}
+
+.social-links div {
+    margin-right: 38px;
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        border: 18px solid #fdbd03;
+        width: 86vw;
+        height: 10px;
+    }
+
+    .whatsapp-icon {
+        visibility: hidden;
+    }
+
+    .column {
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .container {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 18px solid #fdbd03;
+    }
+
+    .container img {
+        width: 79px;
+        padding: 0;
+        margin: 58px auto;
+    }
+
+    .contact-form {
+        width: 80vw;
+        border-bottom: 0;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .personal-details-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .personal-details-form input {
+        width: inherit;
+        height: 37px;
+    }
+
+    .contact-form p {
+        width: inherit;
+        height: inherit;
+    }
+
+    .contact-form button {
+        font-family: "Heebo", sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        width: 100%;
+        height: 37px;
+        color: #000;
+        background-color: #fdbd03;
+        margin-top: 18px;
+        margin-bottom: 50px;
+        border: 0;
+    }
+
+    #name {
+        margin-left: 0;
+    }
+
+    #message {
+        height: 142px;
+        width: inherit;
+    }
+
+    .social-links {
+        margin: 0;
+        width: 80vw;
+        justify-content: space-between;
+    }
+
+    .social-links div {
+        margin: 0;
+    }
+
+    .social-links img {
+        width: 45px;
+        margin: 30px auto;
+    }
+}
+
+/* responsiveness for larger screens */
+@media (min-width: 1200px) {
+    .top-bar {
+        width: 25vw;
+        height: 20px;
+    }
+
+    .container {
+        justify-content: space-around;
+        align-items: center;
+        padding: 50px;
+    }
+
+    .iphone-img {
+        max-width: 400px;
+        margin: 100px 50px;
+    }
+
+    .contact-form {
+        width: 45vw;
+        padding: 150px 0 50px 0;
+    }
+
+    .contact-form h1 {
+        font-size: 72px;
+    }
+
+    .personal-details-form input {
+        width: 500px;
+        height: 60px;
+    }
+
+    #message {
+        height: 180px;
+        width: 100%;
+    }
+
+    .contact-form button {
+        font-size: 26px;
+        width: 200px;
+        height: 60px;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    .social-links img {
+        width: 50px;
+        height: 50px;
+    }
+}

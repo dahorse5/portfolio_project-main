@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Heebo';
+    font-weight: bold;
+}
+
+.background-img {
+    width: 100vw;
+    height: 55vh;
+    background-image: url(../../../projects/projectName1/images/Path\ 15.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.black-box {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 105px;
+    left: 790px;
+    background-color: #1A1A1AD4;
+    width: 350px;
+    height: 410px;
+}
+
+.black-box h2 {
+    font-size: 28px;
+    font-family: 'Heebo';
+    color: white;
+    margin-top: 40px;
+}
+
+.black-box p {
+    color: white;
+    font-size: 14px;
+    margin: 10px;
+    font-family: 'Heebo';
+}
+
+.form {
+    display: flex;  
+    flex-direction: column-reverse;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 320px;
+    width: 100%;
+}
+
+.form_control {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    text-align: right;
+}
+
+label {
+    color: white;
+    font-family: 'Heebo';
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #D31C75;
+    box-sizing: border-box;
+}
+
+.button {
+    width: 100%;
+    max-width: 100px;
+    height: 40px;
+    margin-left: 155px;
+    background-color: #D50064;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #b40054;
+}
+
+@media (max-width: 780px) {
+    .background-img {
+        height: 35vh;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .black-box {
+        width: 300px;
+        height: 440px;
+        background-color: #1A1A1AD4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute; 
+        top: 110px;
+        left: 40px;
+    }
+
+    .black-box h2{
+        font-size: 24px;
+    }
+
+    .black-box p{
+        font-size: 16px;
+    }
+}

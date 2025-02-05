@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%);
+}
+
+.container_one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+}
+
+.container_one h1 {
+    font-size: 160px;
+    font-family: 'Satisfy';
+    color: white;
+}
+
+.container_one h2 {
+    font-size: 32px;
+    font-family: 'Varela Round';
+    color: white;
+}
+
+.container_one p {
+    font-size: 16px;
+    font-family: 'Varela Round';
+    color: white;
+}
+
+.container-form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+}
+
+.form_field {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: column;
+    direction: rtl;
+}
+
+.form_field input {
+    width: 418px;
+    height: 50px;
+    border: 2px solid white;
+    background: transparent;
+    padding: 0 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.form_field label {
+    font-size: 16px;
+    color: #F9F9F9;
+    margin-bottom: 8px;
+}
+
+.container-form button {
+    width: 200px;
+    height: 50px;
+    align-self: flex-end;
+    margin-right: 20px;
+    background-color: white;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s;
+}
+
+.container-form button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1200px) {
+    .container_one h1 {
+        font-size: 100px;
+        margin-bottom: 30px;
+    }
+
+    .container_one h2 {
+        font-size: 26px;
+    }
+
+    .container_one p {
+        font-size: 15px;
+        padding: 0 30px;
+    }
+
+    .form_field input {
+        width: 350px;
+    }
+
+    .container-form button {
+        width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container_one h1 {
+        font-size: 60px;
+        margin-bottom: 45px;
+        margin-top: 5vh;
+    }
+
+    .container_one h2 {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+
+    .container_one p {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    .container-form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .form_field input {
+        width: 300px;
+        margin-left: 40px;
+    }
+
+    .container-form button {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,227 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #1e3c72, #2a5298);
+    overflow-x: hidden;
+}
+
+/* Headings */
+h1 {
+    font-size: 48px;
+    margin: 20px 0;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Video Background */
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    filter: blur(2px);
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Buttons */
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    margin: 15px 10px;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.4s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(255, 126, 95, 0.5);
+}
+
+button:active {
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(221, 36, 118, 0.5);
+}
+
+/* Input Fields */
+input {
+    padding: 15px;
+    font-size: 18px;
+    margin: 15px 0;
+    border: 2px solid #6a11cb;
+    border-radius: 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4a00e0;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(74, 0, 224, 0.6);
+}
+
+/* Select Dropdown */
+select {
+    padding: 12px;
+    font-size: 18px;
+    margin: 10px;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.4s, transform 0.3s;
+}
+
+select:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(98, 182, 239, 0.4);
+}
+
+select:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(74, 0, 224, 0.5);
+}
+
+option{
+    color: black;
+}
+
+/* Question Text */
+#question {
+    font-size: 28px;
+    margin: 30px 0;
+    color: #f3f3f3;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Feedback Text */
+#feedback {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: lightyellow;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Answer List */
+#answerList {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+}
+
+#answerList li.correct {
+    color: #28a745;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#answerList li.incorrect {
+    color: #dc3545;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 780px){
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 80%;;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    input {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    select {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #question {
+        font-size: 24px;
+    }
+
+    #feedback {
+        font-size: 18px;
+    }
+
+    #answerList li.correct,
+    #answerList li.incorrect {
+        font-size: 16px;
+    }
+}

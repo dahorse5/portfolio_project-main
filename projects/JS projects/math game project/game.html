@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Game</title>
+    <link rel="stylesheet" href="./game.css">
+    <script src="./game.js" defer></script>
+</head>
+<body>
+    <video src="./videos/abstract-mathematical-formulas-animation-background-SBV-348993758-preview.mp4" autoplay muted loop playsinline></video>
+    <div class="container">
+        <h1>Math Game</h1>
+        <div>
+            <p>Select Difficulty:</p>
+            <select id="difficultySelection">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <select id="operatorChange">
+                <option value="random">Random</option>
+                <option value="+">Plus</option>
+                <option value="-">Minus</option>
+                <option value="*">Multiply</option>
+                <option value="/">Divide</option>
+            </select>
+        </div>
+        <div>
+            <button id="gameStart" onclick="startGame()">Start Game</button>
+        </div>
+        <div id="game" style="display: none;">
+            <p id="question"></p>
+            <input type="text" id="answerInput" placeholder="Your answer">
+            <button onclick="submitAnswer()">Submit</button>
+            <p id="progress"></p>
+            <div id="feedback"></div>
+        </div>
+        <div id="result" style="display: none;">
+            <h2>Game Over</h2>
+            <p id="score"></p>
+            <h3>Your Answers:</h3>
+            <ul id="answerList"></ul>
+            <button onclick="restartGame()">Play Again</button>
+        </div>
+    </div>
+</body>
+</html>

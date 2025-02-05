@@ -1,0 +1,25 @@
+// setup.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+$font-stack: 'Heebo', sans-serif;
+$primary-color: #020253;
+$secondary-color: #0EE1DA;
+$accent-color: #8E097C;
+
+@mixin flex-center {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: $font-stack;
+background-color: #E5EEFF;
+}

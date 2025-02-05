@@ -1,0 +1,131 @@
+// content.scss
+
+.form-control {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 80px;
+
+    label {
+        width: 20%;
+        font-size: 1rem;
+        color: #0EE1DA;
+        font-weight: bold;
+        align-self: flex-start;
+    }
+
+    input {
+        width: 100%;
+        max-width: 500px;
+        padding: 10px;
+        border: none;
+        border-bottom: 2px solid #0EE1DA;
+        background-color: #E5EEFF;
+    }
+
+    button {
+        width: 100%;
+        max-width: 500px;
+        padding: 10px;
+        background-color: #0EE1DA;
+        color: $primary-color;
+        font-weight: bold;
+        font-family: 'Heebo';
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+        background-color: lighten($primary-color, 10%);
+        color: #fff;
+            }
+        }
+        
+    }
+
+    #inputMessage{
+        height: 200px;
+    }
+
+    .page-item h2 {
+        font-size: 61px;
+        color: #0ee1da;
+        font-weight: bold;
+    }
+    
+    .page-item p {
+        color: #F9F9F9;
+        font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+        body {
+            padding: 20px;
+        }
+        
+        .page-item {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        padding: 15px;
+        }
+
+        .item10{
+            grid-area: 6/1/9/3;
+        }
+
+        .item10 p,
+        h2 {
+        color: #fff;
+        text-align: center;
+        }
+
+        .item10 h2 {
+        font-size: 25px;
+        margin-top: 58px;
+        }
+
+        .item10 p {
+        font-size: 15px;
+        margin-bottom: 0;
+        }
+
+        .page-item h2 {
+        font-size: 1.8rem;
+        }
+
+        .page-item p {
+        font-size: 0.9rem;
+        }
+
+        .form-control {
+        gap: 10px;
+        margin-top: 40px;
+        }
+
+        .form-control label {
+        font-size: 0.9rem;
+        }
+
+        .form-control input {
+        width: 100%;
+        padding: 8px;
+        }
+
+        .form-control button {
+            font-size: 12px;
+            background-color: #0ee1da;
+            color: #011560;
+            height: 33px;
+            margin-top: 11px;
+            font-weight: bold;
+            margin-bottom: 60px;
+        }
+
+        #inputMessage {
+        height: 150px;
+        }
+    }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Builder</title>
+    <link rel="stylesheet" href="./pageBuilder.css">
+    <script src="./pageBuilder.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Page Builder</h1>
+        <p>Build your dream page effortlessly with our intuitive Page Builder!</p>
+        
+        <div class="tools">
+            <select id="buildTool">
+                <option value="" disabled selected>Select element type</option>
+                <option value="header">Header</option>
+                <option value="paragraph">Paragraph</option>
+                <option value="image">Image</option>
+                <option value="button">Button</option>
+                <option value="box">Box</option>
+                <option value="link">Link</option>
+                <option value="unorderedList">Unordered List</option>
+                <option value="orderedList">Ordered List</option>
+            </select>
+            <input type="color" id="backgroundColor" placeholder="Background Color">
+            <input type="text" id="width" placeholder="Enter Width (px)">
+            <input type="text" id="height" placeholder="Enter Height (px)">
+            <input type="text" id="content" placeholder="Enter Content">
+            <input type="text" id="contentColor" placeholder="Content Color">
+            <input type="text" id="contentSize" placeholder="Content Size (px)">
+            <button id="addElement">Add Element</button>
+            <button id="saveElement">Save Page</button>
+            <button id="clearContent">Clear Content</button>
+            <button id="loadContent">Load Content</button>
+        </div>
+    </div>
+
+    <div class="page">
+        <div id="dynamicContent"></div>
+    </div>
+</body>
+</html>

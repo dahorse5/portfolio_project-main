@@ -297,6 +297,36 @@ html {
     transform: translateY(-2px);
 }
 
+.carousel-control-prev,
+    .carousel-control-next {
+        position: absolute;
+        bottom: -500px;
+        left: 50%; 
+        transform: translateX(-60px); 
+        background-color: rgba(0, 0, 0, 0.3); 
+        border-radius: 50%; 
+        width: 50px;
+        height: 50px;
+    }
+
+    .carousel-control-next {
+        transform: translateX(10px); 
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: black; 
+        border-radius: 50%; 
+        width: 40px;
+        height: 40px;
+        border: 2px solid white; 
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        background-color: rgba(0, 0, 0, 0.7); 
+    }
+
 /* Technology icons within project cards */
 .tech-icon {
     width: 30px;

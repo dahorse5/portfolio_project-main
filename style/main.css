@@ -8,6 +8,9 @@ html {
     scroll-behavior: smooth;
 }
 
+body{
+    max-width: 100vw;
+}
 
 /* Navbar Styles */
 .navbar {
@@ -297,34 +300,69 @@ html {
     transform: translateY(-2px);
 }
 
-.carousel-control-prev,
+    /* General Carousel Fixes */
+    .carousel {
+        position: relative;
+        overflow: hidden; 
+        margin-bottom: 60px; 
+    }
+
+    /* Position Buttons at Bottom */
+    .carousel-control-container1{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+        width: 50px;
+    }
+
+    .carousel-control-prev,
     .carousel-control-next {
-        position: absolute;
-        bottom: -500px;
-        left: 50%; 
-        transform: translateX(-60px); 
-        background-color: rgba(0, 0, 0, 0.3); 
+        transform: scale(1);
+        background: linear-gradient(145deg, #f0f0f0, #d6d6d6); 
         border-radius: 50%; 
         width: 50px;
         height: 50px;
+        border: none;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.75); 
+        cursor: pointer;
+        z-index: 10;
+        transition: all 0.3s ease;
     }
 
-    .carousel-control-next {
-        transform: translateX(10px); 
-    }
-
+    /* Arrow Icons */
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
-        background-color: black; 
-        border-radius: 50%; 
-        width: 40px;
-        height: 40px;
+        background-color: black;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
         border: 2px solid white; 
     }
 
+    /* Hover Effect for Buttons */
     .carousel-control-prev:hover,
     .carousel-control-next:hover {
-        background-color: rgba(0, 0, 0, 0.7); 
+        background: linear-gradient(145deg, #ffffff, #e0e0e0); 
+        box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.8); 
+        transform: scale(1.1); 
+    }
+
+    /* Prevent Images from Exceeding the Card */
+    .card-img-top {
+        max-height: 200px; 
+        object-fit: cover; 
+    }
+
+    /* Ensure Carousels Don't Overflow */
+    .carousel-inner {
+        max-height: 400px; 
+    }
+
+    /* Spacing Between Items */
+    .carousel-item {
+        padding-bottom: 20px;
     }
 
 /* Technology icons within project cards */
@@ -512,7 +550,21 @@ html {
         height: 40px;
         font-size: 1.2rem;
     }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        bottom: -40px; 
+        width: 40px;
+        height: 40px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 15px;
+        height: 15px;
+    }
 }
+
 
 /* Responsive Styles for 1200px and below (larger screens) */
 @media (max-width: 1200px) {
@@ -562,5 +614,46 @@ html {
         width: 45px;
         height: 45px;
         font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-inner .row {
+        flex-direction: column; 
+    }
+
+    .carousel-item .col-md-5 {
+        max-width: 100%; 
+    }
+
+    .carousel-item {
+        padding-bottom: 10px; 
+    }
+
+    .card {
+        margin-bottom: 20px; 
+    }
+
+    .card-img-top {
+        max-height: 150px; 
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.5rem; 
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem; 
+        padding: 8px 12px;
     }
 }

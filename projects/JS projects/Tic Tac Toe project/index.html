@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="tic-tac-toe.css">
 </head>
+
 <body>
-        <!-- Opening Screen -->
-        <div id="openingScreen">
-            <h1>Welcome to Tic Tac Toe</h1>
-            <button id="startButton">Start Game</button>
+    <div id="openingScreen">
+        <h1>Welcome to Tic Tac Toe</h1>
+        <button class="menu-button" id="friendButton">Play with a Friend</button>
+        <button class="menu-button" id="aiButton">Play Against Computer</button>
+        <div id="difficultySelector">
+            <label for="difficulty">Choose Difficulty:</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard" selected>Hard</option>
+            </select>
+            <button class="menu-button" id="startAiGame">Start Game</button>
         </div>
-    
-        <!-- Loading Screen -->
-        <div id="loadingScreen">
-            <p>Loading...</p>
-            <div class="spinner"></div>
-        </div>
-        
-    <div id="gameContainer">
-        <h1>Tic Tac Toe</h1>
-        <div id="cellContainer">
-            <div cellIndex="0" class="cell"></div>
-            <div cellIndex="1" class="cell"></div>
-            <div cellIndex="2" class="cell"></div>
-            <div cellIndex="3" class="cell"></div>
-            <div cellIndex="4" class="cell"></div>
-            <div cellIndex="5" class="cell"></div>
-            <div cellIndex="6" class="cell"></div>
-            <div cellIndex="7" class="cell"></div>
-            <div cellIndex="8" class="cell"></div>
-        </div>
-        <h2 id="statusText"></h2>
-        <button id="restartBtn">Restart</button>
     </div>
+
+    <div id="loadingScreen">
+        <p>Loading...</p>
+        <div class="spinner"></div>
+    </div>
+
+    <div id="gameContainer">
+        <p id="statusText">Player X's turn</p>
+        <div id="cellContainer">
+            <div class="cell" data-cell-index="0"></div>
+            <div class="cell" data-cell-index="1"></div>
+            <div class="cell" data-cell-index="2"></div>
+            <div class="cell" data-cell-index="3"></div>
+            <div class="cell" data-cell-index="4"></div>
+            <div class="cell" data-cell-index="5"></div>
+            <div class="cell" data-cell-index="6"></div>
+            <div class="cell" data-cell-index="7"></div>
+            <div class="cell" data-cell-index="8"></div>
+        </div>
+        <button id="restartBtn">Restart Game</button>
+    </div>
+
     <script src="tic-tac-toe.js"></script>
 </body>
+
 </html>

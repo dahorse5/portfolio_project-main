@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, silver, #2575fc);
+    font-family: 'Permanent Marker', cursive, Arial, sans-serif;
+}
+
+#openingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: #ffffff;
+}
+
+#openingScreen h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#startButton {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#startButton:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+#loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9998;
+    color: #ffffff;
+}
+
+#loadingScreen p {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#gameContainer {
+    padding: 20px;
+    border-radius: 10px;
+    background: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    display: none;
+}
+
+.cell {
+    width: 75px;
+    height: 75px;
+    border: 2px solid #555;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #333;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+    border: 3px solid #555;
+    border-radius: 10px;
+    background-color: #fafafa;
+    padding: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#restartBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid #555;
+    background-color: #f8f8f8;
+    color: #333;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#restartBtn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}

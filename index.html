@@ -24,7 +24,6 @@
                         <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="#projects">Services</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -63,13 +62,42 @@
         <div class="about_me text-center">
             <img src="images/profile_pic.jpeg" alt="Profile Picture" class="mb-3">
             <h2>About Me</h2>
-            <p>My name is Or Hazan, and I am a passionate web developer and designer with expertise in HTML, CSS, JavaScript, Bootstrap, Sass, and more. I specialize in both front-end and back-end development, and I take pride in delivering work that not only meets but exceeds expectations, always ahead of deadlines. My strong work ethic, dedication, and proactive approach ensure exceptional results for every project. I am committed to maintaining a high standard of quality, embracing challenges, and striving to create impactful and innovative solutions.</p>
+            <p>    My name is Or Hazan, and I am a passionate web developer and designer with expertise in HTML, CSS, JavaScript, Bootstrap, Sass, and more. I specialize in both front-end and back-end development, and I take pride in delivering work that not only meets but exceeds expectations, always ahead of deadlines. My strong work ethic, dedication, and proactive approach ensure exceptional results for every project. I am committed to maintaining a high standard of quality, embracing challenges, and striving to create impactful and innovative solutions.</p>
+            
+            <div class="accordion-container">
+                <div class="accordion-section">
+                    <input type="checkbox" id="dev-skills" class="accordion-checkbox">
+                    <label for="dev-skills" class="accordion-title">Development Skills</label>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Front-End: HTML, CSS, JavaScript, React</li>
+                            <li>Back-End: Node.js, ES6, OOP</li>
+                            <li>Database Management: MongoDB, MySQL</li>
+                            <li>API Integration</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="accordion-section">
+                    <input type="checkbox" id="design-skills" class="accordion-checkbox">
+                    <label for="design-skills" class="accordion-title">Design & Problem-Solving</label>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>UI/UX: Figma</li>
+                            <li>Animations: CSS</li>
+                            <li>Problem Solving & Algorithms</li>
+                            <li>Debugging & Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
             <a href="./resume.docx" class="btn btn-primary mt-3" download="resume.docx">Download my resume</a>
         </div>
     </div>
 
     <div id="projectsCarousel1" class="carousel slide container my-5" data-bs-ride="carousel">
-        <h2 class="text-center mb-4">HTML & CSS Projects</h2>
+        <h2 class="text-center mb-4" id="projects">HTML & CSS Projects</h2>
         <div class="carousel-inner">
             <!-- Slide 1 -->
             <div class="carousel-item active">

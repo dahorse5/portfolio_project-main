@@ -19,6 +19,10 @@ body{
     padding: 15px 20px;
     border-radius: 0 0 15px 15px; 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
 }
 
 .navbar-toggler {
@@ -377,66 +381,85 @@ body{
     transform: translateY(-2px);
 }
 
-    /* General Carousel Fixes */
-    .carousel {
-        position: relative;
-        overflow: hidden; 
-        margin-bottom: 60px; 
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.carousel-item {    
+    height: 100%; 
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #1AE0EC;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    background-size: 100%, 100%;
+    background-image: none;
+}
+
+.carousel-control-next-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M4.5 0L3.5 1 6 3.5H0v1h6L3.5 7l1 1 4-4-4-4z"/%3E%3C/svg%3E');
+}
+
+.carousel-control-prev-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M3.5 0L4.5 1 2 3.5H8v1H2L4.5 7l-1 1-4-4 4-4z"/%3E%3C/svg%3E');
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-control-prev {
+        left: 5px;
     }
 
-    /* Position Buttons at Bottom */
-    .carousel-control-container1{
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        margin-top: 20px;
-        width: 50px;
+    .carousel-control-next {
+        right: 5px;
     }
-
     .carousel-control-prev,
     .carousel-control-next {
-        transform: scale(1);
-        background: linear-gradient(145deg, #f0f0f0, #d6d6d6); 
-        border-radius: 50%; 
-        width: 50px;
-        height: 50px;
-        border: none;
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.75); 
-        cursor: pointer;
-        z-index: 10;
-        transition: all 0.3s ease;
+        top: 20px;
+        width: 40px;
+        height: 40px;
     }
+    
+    .carousel-control-prev {
+        left: 5px;
+    }
+    
+    .carousel-control-next {
+        right: 5px;
+    }
+}
 
-    /* Arrow Icons */
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        background-color: black;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        border: 2px solid white; 
-    }
 
-    /* Hover Effect for Buttons */
-    .carousel-control-prev:hover,
-    .carousel-control-next:hover {
-        background: linear-gradient(145deg, #ffffff, #e0e0e0); 
-        box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), -6px -6px 12px rgba(255, 255, 255, 0.8); 
-        transform: scale(1.1); 
-    }
 
-    .card-img-top {
-        max-height: 200px; 
-        object-fit: cover; 
-    }
-
-    .carousel-inner {
-        max-height: 400px; 
-    }
-
-    .carousel-item {
-        padding-bottom: 20px;
-    }
 
 /* Technology icons within project cards */
 .tech-icon {

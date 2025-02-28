@@ -6,9 +6,17 @@ const aiButton = document.querySelector("#aiButton");
 const difficultySelector = document.querySelector("#difficultySelector");
 const startAiGame = document.querySelector("#startAiGame");
 const difficultySelect = document.querySelector("#difficulty");
+const menuBtn = document.querySelector("#menuBtn");
+
 
 let playMode = "friend"; 
 let difficulty = "hard";
+
+menuBtn.addEventListener("click", () => {
+    gameContainer.style.display = "none";
+    openingScreen.style.display = "block";
+    restartGame();
+});
 
 friendButton.addEventListener("click", () => {
     playMode = "friend";
@@ -138,11 +146,15 @@ function minimax(board, player) {
     const emptyCells = board.map((val, index) => (val === "" ? index : null)).filter((val) => val !== null);
 
     if (checkWinFor(board, aiPlayer)) {
-        return { score: 10 }; 
-    } else if (checkWinFor(board, currentPlayer)) {
-        return { score: -10 }; 
-    } else if (emptyCells.length === 0) {
-        return { score: 0 }; 
+        return { score: 10 };
+    }
+    
+    if (checkWinFor(board, currentPlayer)) {
+        return { score: -10 };
+    }
+
+    if (emptyCells.length === 0) {
+        return { score: 0 };
     }
 
     const moves = [];
@@ -165,13 +177,33 @@ function minimax(board, player) {
         moves.push(move);
     }
 
-    let bestMove;
+    for (let i = 0; i < emptyCells.length; i++) {
+        board[emptyCells[i]] = aiPlayer;
+        if (checkWinFor(board, aiPlayer)) {
+            board[emptyCells[i]] = "";
+            return { index: emptyCells[i], score: 10 };
+        }
+        board[emptyCells[i]] = "";
+    }
+
+    for (let i = 0; i < emptyCells.length; i++) {
+        board[emptyCells[i]] = currentPlayer;
+        if (checkWinFor(board, currentPlayer)) {
+            board[emptyCells[i]] = "";
+            return { index: emptyCells[i], score: -10 }; 
+        }
+        board[emptyCells[i]] = "";
+    }
+
+    let bestMoves = [];
     if (player === aiPlayer) {
         let bestScore = -Infinity;
         for (let i = 0; i < moves.length; i++) {
             if (moves[i].score > bestScore) {
                 bestScore = moves[i].score;
-                bestMove = moves[i];
+                bestMoves = [moves[i]];
+            } else if (moves[i].score === bestScore) {
+                bestMoves.push(moves[i]);
             }
         }
     } else {
@@ -179,13 +211,17 @@ function minimax(board, player) {
         for (let i = 0; i < moves.length; i++) {
             if (moves[i].score < bestScore) {
                 bestScore = moves[i].score;
-                bestMove = moves[i];
+                bestMoves = [moves[i]];
+            } else if (moves[i].score === bestScore) {
+                bestMoves.push(moves[i]);
             }
         }
     }
 
-    return bestMove;
+    return bestMoves[Math.floor(Math.random() * bestMoves.length)];
 }
+
+
 
 function checkWinFor(board, player) {
     return winConditions.some((condition) =>

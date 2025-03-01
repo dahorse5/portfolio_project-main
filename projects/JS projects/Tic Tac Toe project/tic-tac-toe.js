@@ -15,6 +15,19 @@ let difficulty = "hard";
 menuBtn.addEventListener("click", () => {
     gameContainer.style.display = "none";
     openingScreen.style.display = "block";
+    loadingScreen.style.display = "none";
+    difficultySelector.style.display = "none";
+    openingScreen.style.position = "fixed";
+    openingScreen.style.top = "0";
+    openingScreen.style.left = "0";
+    openingScreen.style.width = "100%";
+    openingScreen.style.height = "100%";
+    openingScreen.style.zIndex = "9999";
+    openingScreen.style.backgroundColor = "rgba(20, 20, 20, 0.95)";
+    openingScreen.style.display = "flex";
+    openingScreen.style.justifyContent = "center";
+    openingScreen.style.alignItems = "center";
+    openingScreen.style.flexDirection = "column";
     restartGame();
 });
 

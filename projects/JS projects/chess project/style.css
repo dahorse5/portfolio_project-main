@@ -3,6 +3,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;  
+        overflow: hidden;
         }
     .chessBoard {
         width:70vw;
@@ -215,7 +216,7 @@
     tr{
         height: 40px;
     }
-
+    
     @media (min-width:600px) {
         .chessBoard {
             width:500px;
@@ -226,34 +227,36 @@
             height: 600px;
         }
         #alert {
-        width:450px;
-        height: 80px;
+            width:450px;
+            height: 80px;
         }
-        #evalBar{
+        #evalBar {
             height: 500px;
         }
     }
     @media (max-width:600px) {
-        .coordinate {
-        font-size: 8px;
+        .chessBoard {
+            width: 90vw;
+            height: 90vw;
         }
         .coordinate {
             font-size: 8px;
-            }
-            #alert {
+        }
+        #alert {
             font-size: 20px;
-            }
-            button {
-            font-size: 10px;
-            }
-            .buttonContainer {
-            flex-direction: row;
-            align-items: last baseline;
-            justify-content: center;
             width: 80vw;
-            }
-            .buttonContainer button, .buttonContainer select {
-            width: 20vw;
+        }
+        button {
+            font-size: 10px;
+        }
+        .buttonContainer {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 90vw;
+        }
+        .buttonContainer button, .buttonContainer select {
+            width: 40vw;
             margin-right: 5px;
-            }
+        }
     }

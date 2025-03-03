@@ -1,5 +1,7 @@
 Portfolio Project by Or Hazan
-Overview
+
+Overview:
+
 This is a personal portfolio project designed to showcase Or Hazan's work, skills, and experience as a web developer and designer. The portfolio features projects, a developer introduction, and details about services offered. It also provides multiple ways for potential clients or collaborators to get in touch.
 
 Technologies Used
